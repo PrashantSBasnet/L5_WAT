@@ -1,5 +1,3 @@
-Here is a clean, professional **README.md** based on the transcript you provided:
-
 STEP: I
 ---
 
@@ -85,15 +83,9 @@ Click the link or paste it into your browser to see Django’s default landing p
 
 ---
 
-## Congratulations!
-
+##
 You have successfully:
 
 * Created a Django project
 * Understood its structure
 * Launched your first development server
-
-You're now ready to continue building your Django applications!
-
----
-
