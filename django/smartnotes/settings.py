@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # todo: apps we created must be added here
+    'home',
 ]
 
 MIDDLEWARE = [
