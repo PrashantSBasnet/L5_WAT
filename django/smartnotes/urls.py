@@ -15,12 +15,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from home import views
+from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+
+
     #maintaining urls
-    path ('home/', views.home),
-    path ('welcome/', views.welcome),
+    # path ('home/', views.home),
+    # path ('welcome/', views.welcome),
+
+    # using include to make it modular - good design to follow
+    # no need to import home.views & home.welcome and when we delete home app is still functional
+    path('', include('home.urls')),
 ]
