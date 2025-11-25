@@ -5,6 +5,7 @@ from . import views
 from .views import authorized
 
 urlpatterns=[
-    path('admin', admin.site.urls),
-    path('welcome/', views.home),
+    path('admin/', admin.site.urls),
+    path('home/', views.home),
+    path('authorized/', views.authorized),
 ]
