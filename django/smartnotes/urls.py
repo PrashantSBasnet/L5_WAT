@@ -20,5 +20,7 @@ from home import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path ('home/', views.home) #todo maintain the url
+    #maintaining urls
+    path ('home/', views.home),
+    path ('welcome/', views.welcome),
 ]
