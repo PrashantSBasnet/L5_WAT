@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # todo: apps we created must be added here
-    'home',
+    'home', #reistering new app
+    'notes' #registering new app
 ]
 
 MIDDLEWARE = [
