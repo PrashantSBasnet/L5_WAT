@@ -1,17 +1,15 @@
 import datetime
-from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
-from django.shortcuts import render
 
-#
-# '''you can get an http response'''
-# def home(request):
-#     return HttpResponse("Hello, World!")
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import TemplateView
 
-'''you can render an html page'''
-def home(request):
-    return render(request, 'home/welcome.html', {'today': datetime.date.today()})
+'''Class-Based Views'''
 
-@login_required (login_url="/admin") #to block the access if the user is not logged in, add the decorator
-def authorized(request):
-    return render(request, 'home/authorized.html', {})
+
+class HomeView(TemplateView):
+    template_name = "home/index.html"
+
+
+class AuthorizedView(LoginRequiredMixin, TemplateView):
+    template_name = "home/authorized.html"
+    login_url = "/admin"

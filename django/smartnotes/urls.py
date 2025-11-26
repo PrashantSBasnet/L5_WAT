@@ -18,12 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    #maintaining urls
-    # path ('home/', views.home),
-    # path ('welcome/', views.welcome),
-
-    # using include to make it modular - good design to follow
-    # no need to import home.views & home.welcome and when we delete home app is still functional
+    path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('smart/', include('notes.urls')),
 ]
