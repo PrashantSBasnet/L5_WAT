@@ -1,11 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome</title>
-</head>
-<body>
-<h1>Hello, This is an HTML Page! See how date is displayed dynamically</h1>
-<p>Today is: {{today}} </p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="section">
+    <div class="container">
+        <div class="box">
+            <h1 class="title">Welcome to SmartNotes!</h1>
+            <p class="subtitle">Today is {{ today }}</p>
+
+            <!-- Checkout button using Bulma -->
+            <a href="/checkout/" class="button is-primary is-large">
+                <span class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </span>
+                <span>Checkout</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
