@@ -1,12 +1,17 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import CreateView,ListView, DetailView
 
 from .models import Notes
+
+class NotesCreateView(CreateView):
+    model = Notes
+    fields = ["title","text"]
+    template_name = "notes_form.html"
+    success_url = '/smart/notes/'
 
 class NotesListView(ListView):
     model = Notes
     context_object_name = "notes"
     template_name = "notes_list.html"
-
 
 class NotesDetailView(DetailView):
     model = Notes
