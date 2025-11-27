@@ -1,11 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome</title>
-</head>
-<body>
-<h1>Hello, This is an HTML Page! See how date is displayed dynamically</h1>
-<p>Today is: {{today}} </p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="py-5">
+  <div class="container">
+    <div class="card p-4 shadow-sm">
+      <h1 class="h2 mb-3">Welcome to SmartNotes!</h1>
+      <p class="lead mb-4">Today is {{ today }}</p>
+
+      <!-- Checkout button using Bootstrap -->
+      <a href="/checkout/" class="btn btn-primary btn-lg">
+        <i class="fas fa-shopping-cart me-2"></i>
+        Checkout
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
