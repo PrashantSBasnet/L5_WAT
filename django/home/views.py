@@ -7,7 +7,7 @@ from django.views.generic import TemplateView
 
 
 class HomeView(TemplateView):
-    template_name = "home/index.html"
+    template_name = "home/welcome.html"
 
 
 class AuthorizedView(LoginRequiredMixin, TemplateView):
