@@ -1,11 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1> These are the notes:</h1>
-<ul>
-    {% for note in notes %}
-        <li class="note-li">{{note.title}}</li>
-    {% endfor %}
-</ul>
+<div class="container mt-4">
+    <h1 class="mb-4">These are the notes</h1>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for note in notes %}
+        <div class="col">
+            <!-- Wrap the card in a link to the note detail -->
+            <a href="{% url 'notes-detail' note.pk %}" class="text-decoration-none text-dark">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ note.title }}</h5>
+                        <p class="card-text">{{ note.text|truncatewords:20 }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}
