@@ -1,4 +1,4 @@
-from django.views.generic import CreateView,ListView, DetailView
+from django.views.generic import CreateView,ListView, DetailView, UpdateView
 
 from .forms import NotesForm
 from .models import Notes
@@ -18,3 +18,9 @@ class NotesDetailView(DetailView):
     model = Notes
     context_object_name = "note"
     template_name = "notes_detail.html"
+
+class NotesUpdateView(UpdateView):
+    model = Notes
+    template_name = "notes_form.html"
+    success_url = '/smart/notes'
+    form_class = NotesForm

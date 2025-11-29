@@ -8,7 +8,7 @@
         {% for note in notes %}
         <div class="column is-12 is-half-tablet is-half-desktop">
             <!-- Wrap the card in a link to the note detail -->
-            <a href="{% url 'notes-detail' note.pk %}" class="has-text-dark" style="text-decoration: none;">
+            <a href="{% url 'notes.detail' note.pk %}" class="has-text-dark" style="text-decoration: none;">
                 <div class="card" style="height: 100%;">
                     <div class="card-content">
                         <p class="title is-5">{{ note.title }}</p>
