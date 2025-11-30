@@ -2,16 +2,18 @@
 
 {% block content %}
 
-<div class="py-5">
+<div class="section">
   <div class="container">
-    <div class="card p-4 shadow-sm">
-      <h1 class="h2 mb-3">Welcome to SmartNotes!</h1>
-      <p class="lead mb-4">Today is {{ today }}</p>
+    <div class="box">
+      <h1 class="title is-3">Welcome to SmartNotes!</h1>
+      <p class="subtitle is-5">Today is {{ today }}</p>
 
-      <!-- Checkout button using Bootstrap -->
-      <a href="/checkout/" class="btn btn-primary btn-lg">
-        <i class="fas fa-shopping-cart me-2"></i>
-        Checkout
+      <!-- Checkout button using Bulma -->
+      <a href="/checkout/" class="button is-primary is-large">
+        <span class="icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+        <span>Checkout</span>
       </a>
     </div>
   </div>
