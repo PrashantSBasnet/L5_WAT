@@ -9,3 +9,4 @@ class Notes(models.Model):
     created = models.DateTimeField(auto_now_add=True)  #value is automatically populated each time
     # FK, when user is deleted - the associated notes are deleted.
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='notes')
+    is_public = models.BooleanField(default=False)

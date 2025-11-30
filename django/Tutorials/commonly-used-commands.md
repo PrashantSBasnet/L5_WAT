@@ -1,4 +1,3 @@
-Great walkthrough! 🚀 You’ve basically outlined the common Django workflow for interacting with models via the shell. Let me organize and expand on what you’ve written so it’s crystal clear:
 
 ---
 
@@ -11,7 +10,8 @@ Great walkthrough! 🚀 You’ve basically outlined the common Django workflow f
 
 ## Common Django Commands
 - `python manage.py runserver` → Start the development server  
-- `python manage.py migrate` → Apply database migrations  
+- `python manage.py migrate` → Apply database migrations to the database
+- `python manage.py makemigrations` → Create migration files after changing models
 - `python manage.py createsuperuser` → Create an admin user  
 - `python manage.py shell` → Open Django’s interactive shell  
 
