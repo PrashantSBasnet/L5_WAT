@@ -8,6 +8,81 @@ Django shell is an interactive Python shell with Django environment loaded, allo
 python manage.py shell
 ```
 
+
+##  Importing Models
+Inside the shell:
+```python
+from notes.models import Notes
+```
+
+---
+
+##  Query Examples
+
+### 1. Fetch All Notes
+```python
+newObject = Notes.objects.all()
+newObject
+```
+**Output:**
+```python
+<QuerySet [<Notes: Notes object (3)>, <Notes: Notes object (4)>, ...]>
+```
+Shows all records in the `Notes` table.
+
+---
+
+### 2. Fetch a Single Note by ID
+```python
+note = Notes.objects.get(pk=3)
+note
+```
+**Output:**
+```python
+<Notes: Notes object (3)>
+```
+💡 `pk` = primary key (usually the `id` field).
+
+---
+
+### 3. Fetch the First Record
+```python
+note = Notes.objects.first()
+note
+```
+**Output:**
+```python
+<Notes: Notes object (3)>
+```
+
+---
+
+### 4. View All Field Values of an Object
+```python
+note.__dict__
+```
+**Output:**
+```python
+{
+  '_state': <django.db.models.base.ModelState object>,
+  'id': 3,
+  'title': 'added note',
+  'text': 'i have added this today!',
+  'created': datetime.datetime(2025, 11, 27, 16, 15, 51, 312455, tzinfo=datetime.timezone.utc),
+  'user_id': 1
+}
+```
+
+---
+
+##  Key Takeaways
+- `objects.all()` → returns all rows  
+- `objects.get(pk=ID)` → fetches a single row by primary key  
+- `objects.first()` → fetches the first row  
+- `__dict__` → reveals all field values of a model instance  
+
+---
+
 ## Basic Model Operations
 
 ### Import Your Models
@@ -238,12 +313,3 @@ exit()
 - **MultipleObjectsReturned**: Use `filter()` instead of `get()`
 - **IntegrityError**: Check required fields and constraints
 
-## Practice Exercises
-
-1. Create 5 different notes
-2. Query notes created today
-3. Update all notes to add "Updated: " prefix to titles
-4. Delete notes containing "test" in title
-5. Count total notes in database
-
-The Django shell is essential for testing queries, debugging, and data manipulation during development.
