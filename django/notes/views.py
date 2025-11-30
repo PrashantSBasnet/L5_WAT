@@ -59,3 +59,9 @@ class NotesDeleteView(LoginRequiredMixin,DeleteView):
     model = Notes
     template_name = 'notes_delete.html'
     success_url = '/smart/notes'
+
+class NotesPublicDetailView(DetailView):
+    model = Notes
+    context_object_name = "note"
+    template_name = "notes_detail.html"
+    queryset = Notes.objects.filter(is_public=True)
