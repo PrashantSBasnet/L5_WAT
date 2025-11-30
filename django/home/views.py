@@ -1,6 +1,7 @@
 import datetime
 
 from django.contrib.auth import logout
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import redirect
@@ -30,3 +31,6 @@ class HomeView(TemplateView):
 class AuthorizedView(LoginRequiredMixin, TemplateView):
     template_name = "home/authorized.html"
     login_url = "/admin"
+
+class SignUpView(UserCreationForm):
+    template_name = "home/signup.html"

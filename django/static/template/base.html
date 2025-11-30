@@ -26,13 +26,11 @@
                     <button type="submit" class="button is-light" type="submit">Logout</button>
                 </form>
                 {% else %}
+                <a href="{% url 'notes.new' %}" class="button is-light" type="submit">Create</a>
                 <a href="{% url 'login' %}" class="button is-light">Login</a>
                 {% endif %}
             </div>
         </div>
-
-
-    </div>
     </div>
 </nav>
 
