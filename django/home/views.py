@@ -16,7 +16,7 @@ class LogoutInterfaceView(LogoutView):
     #more secure way
     def post(self, request, *args, **kwargs):
         logout(request)
-        return redirect("home/login.html")  # or wherever you want
+        return redirect("login")  # or wherever you want
 
 class HomeView(TemplateView):
     template_name = "home/welcome.html"
