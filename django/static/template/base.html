@@ -20,14 +20,18 @@
         <div class="navbar-end">
             <div class='navbar-item'>
                 {% if user.is_authenticated %}
+
                 <a href="{% url 'notes.list' %}" class="button is-light" type="submit">View Notes</a>
+                <a href="{% url 'notes.new' %}" class="button is-light" type="submit">Create Notes</a>
                 <form method="POST" action="{% url 'logout' %}">
                     {% csrf_token %}
                     <button type="submit" class="button is-light" type="submit">Logout</button>
                 </form>
+
                 {% else %}
-                <a href="{% url 'notes.new' %}" class="button is-light" type="submit">Create</a>
                 <a href="{% url 'login' %}" class="button is-light">Login</a>
+                <a href="{% url 'signup' %}" class="button is-light">Signup</a>
+
                 {% endif %}
             </div>
         </div>
