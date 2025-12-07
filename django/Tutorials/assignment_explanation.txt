@@ -1,13 +1,8 @@
-
-
-
-
-
-**Construction Project Bidding & Team Formation System**
+Construction Project Bidding & Team Formation System
 
 A platform for councils to publish construction projects and for contractors to bid on specialized work packages.
 
-**Overview**
+Overview
 
 Large construction projects require many specialized services—excavation, traffic management, surfacing, painting, facilities, and more.
 This system provides a central platform where:
@@ -18,7 +13,7 @@ Contractors can bid on specific work packages
 
 Management companies can evaluate bids and assemble a qualified delivery team
 
-**Purpose**
+Purpose
 
 The system aims to simplify and digitize the project procurement workflow:
 
@@ -30,18 +25,17 @@ Management companies assist in evaluation and team formation
 
 This ensures transparency, efficiency, and proper documentation for all parties.
 
-
-**User Roles**
-**Role	Responsibilities**
+User Roles
+Role	Responsibilities
 Admin	Full system control, manage all users and data
 Council	Create and manage projects, work packages, evaluate bids
 Management Company	Review bids, help assemble contractor teams
 Contractor	Browse projects, submit/edit bids, maintain profile
 
-**Role-based access control ensures data privacy and workflow integrity.**
+Role-based access control ensures data privacy and workflow integrity.
 
-**Key Features**
-**1. Project Management**
+Key Features
+1. Project Management
 
 Councils can:
 
@@ -59,7 +53,7 @@ Browse open projects
 
 View project details (read-only)
 
-**2. Work Packages**
+2. Work Packages
 
 Projects are divided into smaller specialized tasks such as:
 
@@ -87,7 +81,7 @@ Councils create/edit/delete packages
 
 Contractors browse available packages and apply
 
-**3. Contractor Bidding System**
+3. Contractor Bidding System
 
 Contractors can:
 
@@ -107,7 +101,7 @@ Compare competing bids
 
 Approve or reject proposals
 
-**4. Team Formation**
+4. Team Formation
 
 Once bids are accepted:
 
@@ -121,7 +115,7 @@ Remove/replace contractors
 
 Add missing services
 
-**5. User & Access Management**
+5. User & Access Management
 
 Role-based authorization
 
@@ -131,7 +125,7 @@ Secure document handling
 
 Activity logging (optional enhancement)
 
-**Non-Functional Requirements**
+Non-Functional Requirements
 Security
 
 RBAC (Role-Based Access Control)
@@ -162,8 +156,8 @@ No bid loss during submission
 
 Stable performance under load
 
-**High-Level Workflow**
-
+High-Level Workflow
+flowchart TD
     A[Council Creates Project] --> B[Add Work Packages]
     B --> C[Publish Project]
     C --> D[Contractors Browse & Submit Bids]
@@ -171,3 +165,5 @@ Stable performance under load
     E --> F[Award Contracts]
     F --> G[System Forms Contractor Team]
     G --> H[Project Execution Begins]
+
+
